@@ -1,5 +1,7 @@
 package me.lzb.basic.dsaa.tree;
 
+import me.lzb.basic.dsaa.tree.binary.BinarySearchTree;
+import me.lzb.basic.dsaa.tree.binary.BinaryTreeNode;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;

@@ -28,6 +28,7 @@
         <module>other</module>
         <module>zookeeper</module>
         <module>design-pattern</module>
+        <module>network</module>
     </modules>
 
     <properties>

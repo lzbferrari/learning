@@ -1,4 +1,4 @@
-package me.lzb.basic.dsaa.tree;
+package me.lzb.basic.dsaa.tree.binary;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

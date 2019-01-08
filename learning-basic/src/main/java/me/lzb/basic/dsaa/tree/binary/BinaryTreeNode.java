@@ -1,4 +1,4 @@
-package me.lzb.basic.dsaa.tree;
+package me.lzb.basic.dsaa.tree.binary;
 
 /**
  * @author LZB
