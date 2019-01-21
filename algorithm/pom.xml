@@ -11,7 +11,6 @@
 
     <artifactId>algorithm</artifactId>
     <name>algorithm</name>
-    <version>1.0</version>
 
     <dependencies>
         <dependency>

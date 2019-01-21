@@ -11,7 +11,7 @@
     <packaging>pom</packaging>
 
     <url>https://github.com/lzbferrari/learning</url>
-    <description>涨姿势</description>
+    <description>瑟瑟发抖</description>
 
     <developers>
         <developer>
@@ -72,6 +72,13 @@
 
 
     <dependencies>
+        <!--guava-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>27.0.1-jre</version>
+        </dependency>
+
         <!--junit-->
         <dependency>
             <groupId>junit</groupId>
