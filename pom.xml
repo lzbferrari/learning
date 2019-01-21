@@ -29,6 +29,7 @@
         <module>zookeeper</module>
         <module>design-pattern</module>
         <module>network</module>
+        <module>algorithm</module>
     </modules>
 
     <properties>

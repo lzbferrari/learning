@@ -1,6 +1,6 @@
 package me.lzb.jvm.print;
 
-import me.lzb.common.utils.AppUtils;
+import me.lzb.common.utils.OtherUtils;
 import me.lzb.jvm.clz.ClassFile;
 import me.lzb.jvm.constant.ConstantInfo;
 import me.lzb.jvm.constant.ConstantPool;
@@ -20,7 +20,7 @@ public class ClassPrinter {
         this.classFile = classFile;
         this.pool = classFile.getConstantPool();
 
-        this.poolLong = AppUtils.getDigit(this.pool.getSize());
+        this.poolLong = OtherUtils.getDigit(this.pool.getSize());
 
     }
 
@@ -41,7 +41,7 @@ public class ClassPrinter {
     }
 
     private String dq(int i) {
-        int iLong = AppUtils.getDigit(i);
+        int iLong = OtherUtils.getDigit(i);
 
         int c = poolLong - iLong;
 

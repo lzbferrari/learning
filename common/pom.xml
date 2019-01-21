@@ -13,4 +13,13 @@
     <version>1.0</version>
     <name>common</name>
 
+    <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+    <dependencies>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>27.0.1-jre</version>
+        </dependency>
+    </dependencies>
+
 </project>

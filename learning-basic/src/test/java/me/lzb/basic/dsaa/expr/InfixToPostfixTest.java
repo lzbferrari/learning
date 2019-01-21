@@ -39,4 +39,9 @@ public class InfixToPostfixTest {
             Assert.assertEquals("10 2 3 * - 50 +", toPostfix.change());
         }
     }
+    @Test
+    public void test(){
+        InfixToPostfix toPostfix = new InfixToPostfix("(1+1)*(2+2)");
+        System.out.println(toPostfix.change());
+    }
 }

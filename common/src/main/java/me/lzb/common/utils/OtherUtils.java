@@ -3,7 +3,7 @@ package me.lzb.common.utils;
 /**
  * @author LZB
  */
-public class AppUtils {
+public class OtherUtils {
 
     /**
      * 获取一个数的位数
@@ -20,4 +20,11 @@ public class AppUtils {
         }
         return c;
     }
+
+    public static long[] cutTail(long[] source, int cutLength){
+        long[] r = new long[cutLength];
+        System.arraycopy(source, source.length - cutLength, r, 0, cutLength);
+        return r;
+    }
+
 }
