@@ -44,6 +44,24 @@ public class Solution {
     }
 
 
+    public static int maxSubArray2(int[] nums) {
+        int sum = nums[0];
+        for (int i = 0; i < nums.length; i++) {
+            int s = nums[i];
+            if (s > sum) {
+                sum = s;
+            }
+            for (int j = i + 1; j < nums.length; j++) {
+                s = s + nums[j];
+                if (s > sum) {
+                    sum = s;
+                }
+            }
+        }
+        return sum;
+    }
+
+
     public static void main(String[] args) {
         int[] array = {-1, 0, -2};
 
