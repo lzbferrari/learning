@@ -127,7 +127,7 @@ class Solution {
                     }
                 } else {
                     char[] tt = getCharArray(tmp.length, useTc1, tc1, idx1, tc2, idx2);
-                    if(tt!= null){
+                    if (tt != null) {
                         tmp = tt;
                     }
 
@@ -142,7 +142,7 @@ class Solution {
                 l = l + 1;
                 r = r + 1;
                 char[] tt = getCharArray(tmp.length, useTc1, tc1, idx1, tc2, idx2);
-                if(tt!= null){
+                if (tt != null) {
                     tmp = tt;
                 }
             }
@@ -171,15 +171,127 @@ class Solution {
                 }
             }
         }
-
         return null;
+    }
 
+
+    private static String dynamic(String s) {
+        if (s == null || "".equals(s)) {
+            return "";
+        }
+
+        if (s.length() == 1) {
+            return s;
+        }
+
+        char[] charArray = s.toCharArray();
+
+        //长度为1时，所有的单个字母都是回文子串
+        //在此基础上搜索，奇数回文
+        int length1 = 1;
+        int[][] tmpIndex1 = new int[s.length()][2];//存回文子串在charArray里的坐标，左闭右开
+        int idx1 = tmpIndex1.length;//当前空着的最小坐标
+        for (int i = 0; i < tmpIndex1.length; i++) {
+            tmpIndex1[i][0] = i;
+            tmpIndex1[i][1] = i + 1;
+        }
+
+
+        //在1的基础上，初始化长度为2的回文
+        //在此基础上搜索，偶数回文
+        int length2 = 2;
+        int[][] tmpIndex2 = new int[s.length() - 1][2];
+        int idx2 = 0;
+        for (int i = 0; i < tmpIndex1.length; i++) {
+            int[] one = tmpIndex1[i];
+            if (one[1] + 1 > tmpIndex1.length) {
+                break;
+            }
+            int l = one[0];
+            int r = one[1];
+            if (charArray[l] == charArray[r]) {
+                tmpIndex2[idx2][0] = l;
+                tmpIndex2[idx2][1] = r + 1;
+                idx2 = idx2 + 1;
+            }
+        }
+
+
+        while (length1 + 2 <= s.length()) {
+            int nextIdx = 0;
+            for (int i = 0; i < idx1; i++) {
+                int[] xx = tmpIndex1[i];
+                int l = xx[0];
+                int r = xx[1];
+                if (l <= 0) {
+                    continue;
+                }
+
+                if(r >= s.length()){
+                    break;
+                }
+
+                if (charArray[l - 1] == charArray[r]) {
+                    tmpIndex1[nextIdx][0] = l - 1;
+                    tmpIndex1[nextIdx][1] = r + 1;
+                    nextIdx = nextIdx + 1;
+                }
+            }
+
+            if (nextIdx == 0) {
+                break;
+            } else {
+                idx1 = nextIdx;
+            }
+            length1 = length1 + 2;
+        }
+
+
+        while (length2 + 2 <= s.length()) {
+            int nextIdx = 0;
+            for (int i = 0; i < idx2; i++) {
+                int[] xx = tmpIndex2[i];
+                int l = xx[0];
+                int r = xx[1];
+                if (l <= 0) {
+                    continue;
+                }
+
+                if(r >= s.length()){
+                    break;
+                }
+                if (charArray[l - 1] == charArray[r]) {
+                    tmpIndex2[nextIdx][0] = l - 1;
+                    tmpIndex2[nextIdx][1] = r + 1;
+                    nextIdx = nextIdx + 1;
+                }
+            }
+
+            if (nextIdx == 0) {
+                break;
+            } else {
+                idx2 = nextIdx;
+            }
+            length2 = length2 + 2;
+        }
+
+        int[] r;
+        int x1 = tmpIndex1[0][1] - tmpIndex1[0][0];
+        int x2 = tmpIndex2[0][1] - tmpIndex2[0][0];
+        if (x1 >= x2) {
+            r = tmpIndex1[0];
+        } else {
+            r = tmpIndex2[0];
+        }
+        return s.substring(r[0], r[1]);
     }
 
 
     public static void main(String[] args) {
-        String s = "bb";
-        System.out.println(longestCommonSubsequence(s));
+        String s = "babad";
+        System.out.println(dynamic(s));
+
+
     }
 
 }
