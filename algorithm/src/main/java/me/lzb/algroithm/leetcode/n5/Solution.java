@@ -15,7 +15,7 @@ package me.lzb.algroithm.leetcode.n5;
  * <p>
  * Created by lzb on 19/2/13
  */
-public class Solution {
+class Solution {
 
     /**
      * 暴力穷举

@@ -6,7 +6,7 @@ package me.lzb.algroithm.leetcode.n1;
  *
  * Created by lzb on 19/1/22
  */
-public class Solution {
+class Solution {
 
     public int[] twoSum(int[] nums, int target) {
         int[] r = new int[2];

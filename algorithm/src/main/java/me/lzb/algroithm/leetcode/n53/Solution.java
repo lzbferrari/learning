@@ -14,7 +14,7 @@ package me.lzb.algroithm.leetcode.n53;
  * <p>
  * Created by lzb on 19/1/23
  */
-public class Solution {
+class Solution {
 
     public static int maxSubArray(int[] nums) {
         int sum = nums[0];

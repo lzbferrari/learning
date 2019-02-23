@@ -6,7 +6,7 @@ import org.junit.Assert;
  * 颠倒二进制位
  * @author LZB
  */
-public class Solution {
+class Solution {
     /**
      * 思路：
      * 初始1101= 1*2^3 + 1*2^2 + 0*2^1 + 1*2^0 --倒过来--> 1*2^0 + 1*2^1 + 0*2^2 + 1*2^3

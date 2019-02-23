@@ -18,7 +18,7 @@ import java.util.Queue;
  *
  * @author LZB
  */
-public class MyStack {
+class MyStack {
     private Queue<Integer> queue1;
     private Queue<Integer> queue2;
     private boolean isOne;
