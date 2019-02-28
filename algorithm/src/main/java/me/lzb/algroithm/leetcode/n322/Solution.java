@@ -30,7 +30,7 @@ class Solution {
      * @return
      */
     public int coinChange(int[] coins, int amount) {
-        //用来存放每一次份的结果，从0到amount
+        //tmp[i]:存放凑i元的最优解
         int[] tmp = new int[amount + 1];
 
         //初始化0元的结果作为基础，为了方便理解，数组里的默认值就是0
