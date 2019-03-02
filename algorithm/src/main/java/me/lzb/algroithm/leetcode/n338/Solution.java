@@ -49,7 +49,7 @@ class Solution {
 
         int[] result = new int[num + 1];
 
-        int s = 1;
+            int s = 1;
         int a  = 0;
         for (int i = 1; i <= num ; i++) {
             //当循环到当前长度开始的坐标时，开始下一轮
