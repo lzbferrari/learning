@@ -30,6 +30,7 @@
         <module>design-pattern</module>
         <module>network</module>
         <module>algorithm</module>
+        <module>java-basic</module>
     </modules>
 
     <properties>
