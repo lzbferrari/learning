@@ -15,7 +15,7 @@ package me.lzb.algroithm.leetcode.n2;
  *
  * @author LZB
  */
-public class Solution {
+class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         //个位的计算
         int sum1 = l1.val + l2.val;

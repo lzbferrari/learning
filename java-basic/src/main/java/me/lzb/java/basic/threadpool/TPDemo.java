@@ -1,4 +1,4 @@
-package me.lzb.java.basic.threadpopl;
+package me.lzb.java.basic.threadpool;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
