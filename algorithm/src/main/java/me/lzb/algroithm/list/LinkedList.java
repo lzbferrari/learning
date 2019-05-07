@@ -264,13 +264,13 @@ public class LinkedList implements List {
             this.first.next.next = firstNext;
             current.next = currentNext;
         }
-        Node first = this.first;
+        Node tmpFirst = this.first;
 
-        this.first = first.next;
-        current.next = first;
-        last = first;
+        this.first = tmpFirst.next;
+        current.next = tmpFirst;
+        last = tmpFirst;
 
-        first.next = null;
+        tmpFirst.next = null;
     }
 
     /**
