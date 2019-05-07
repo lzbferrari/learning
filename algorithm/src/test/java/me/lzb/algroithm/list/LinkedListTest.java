@@ -125,6 +125,18 @@ public class LinkedListTest {
     }
 
     @Test
+    public void reverse2Test() {
+        linkedList.reverse2();
+        Assert.assertEquals("[d,c,b,a]", linkedList.toString());
+    }
+
+    @Test
+    public void reverse3Test() {
+        linkedList.reverse3();
+        Assert.assertEquals("[d,c,b,a]", linkedList.toString());
+    }
+
+    @Test
     public void removeFirstHalfTest() {
         intList.removeFirstHalf();
         Assert.assertEquals("[4,5,6,7,8]", intList.toString());

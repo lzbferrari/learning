@@ -25,6 +25,11 @@ public class LinkedList implements List {
             this.data = data;
             this.next = next;
         }
+
+        @Override
+        public String toString() {
+            return data.toString();
+        }
 //        public Node(Object data, Node next, int i) {
 //            this.data = data;
 //            this.next = next;
@@ -223,9 +228,6 @@ public class LinkedList implements List {
      * 例如链表为 3->7->10 , 逆置后变为  10->7->3
      */
     public void reverse() {
-
-        //还可以用堆栈 先进后出
-
         if (size() <= 1) {
             return;
         }
@@ -240,8 +242,59 @@ public class LinkedList implements List {
         for (int i = array.length - 1; i >= 0; i--) {
             add(array[i]);
         }
-
     }
+
+    /**
+     * 从第2个节点到第N个节点，依次逐节点插入到第1个节点(head节点)之后，最后将第一个节点挪到新表的表尾。
+     */
+    public void reverse2() {
+
+        if (size() <= 1) {
+            return;
+        }
+
+        Node current = this.first.next;
+        Node firstNext = null;
+        Node currentNext = null;
+
+        while (current.next != null) {
+            firstNext = this.first.next;
+            this.first.next = current.next;
+            currentNext = this.first.next.next;
+            this.first.next.next = firstNext;
+            current.next = currentNext;
+        }
+        Node first = this.first;
+
+        this.first = first.next;
+        current.next = first;
+        last = first;
+
+        first.next = null;
+    }
+
+    /**
+     * 使用3个指针遍历单链表，逐个链接点进行反转。
+     */
+    public void reverse3() {
+
+        if (size() <= 1) {
+            return;
+        }
+
+        Node tmp = this.first;
+        Node next = this.first.next;
+        Node nextNext = null;
+        this.first.next = null;
+        while (next != null) {
+            nextNext = next.next;
+            next.next = tmp;
+            tmp = next;
+            next = nextNext;
+        }
+        this.first = tmp;
+    }
+
 
     /**
      * 删除一个单链表的前半部分
@@ -485,16 +538,27 @@ public class LinkedList implements List {
 
 
     public String toString() {
-        StringBuffer buffer = new StringBuffer();
+        StringBuilder buffer = new StringBuilder();
         buffer.append("[");
         Node node = first;
-        while (node != null) {
+
+        for (int i = 0; i < size; i++) {
+            if (node == null) {
+                break;
+            }
             buffer.append(node.data);
             if (node.next != null) {
                 buffer.append(",");
             }
             node = node.next;
         }
+//        while (node != null) {
+//            buffer.append(node.data);
+//            if (node.next != null) {
+//                buffer.append(",");
+//            }
+//            node = node.next;
+//        }
         buffer.append("]");
         return buffer.toString();
     }
