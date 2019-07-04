@@ -21,6 +21,12 @@ package me.lzb.algroithm.leetcode.n300;
  */
 class Solution {
 
+    /**
+     * 动态规划
+     *
+     * @param nums
+     * @return
+     */
     public int lengthOfLIS(int[] nums) {
         if (nums == null || nums.length <= 0) {
             return 0;
@@ -68,10 +74,84 @@ class Solution {
         return r;
     }
 
+
+    /**
+     * 贪心加二分
+     *
+     * @param nums
+     * @return
+     */
+    public int lengthOfLIS2(int[] nums) {
+        if (nums == null || nums.length <= 0) {
+            return 0;
+        }
+        int[] xx = new int[nums.length];
+        xx[0] = nums[0];
+        int idx = 0;
+
+        for (int i = 1; i < nums.length; i++) {
+
+            if (nums[i] > xx[idx]) {
+                idx = idx + 1;
+                xx[idx] = nums[i];
+            }
+
+            if (nums[i] < xx[idx]) {
+
+                int low = 0;
+                int high = idx;
+                int mid;
+                while (low <= high) {
+                    mid = low + (high - low) / 2;
+                    if (xx[mid] == nums[i]) {
+                        break;
+                    }
+
+
+                    if (mid <= 0) {
+                        if (xx[0] > nums[i]) {
+                            xx[0] = nums[i];
+                            break;
+                        }
+                    }
+
+                    if (mid >= idx) {
+                        if (xx[idx] > nums[i]) {
+                            xx[idx] = nums[i];
+                            break;
+                        }
+                    }
+
+
+                    if (xx[mid] > nums[i]) {
+                        if (xx[mid - 1] < nums[i]) {
+                            xx[mid] = nums[i];
+                            break;
+                        }
+                        high = mid - 1;
+                    }
+
+                    if (xx[mid] < nums[i]) {
+                        if (xx[mid + 1] > nums[i]) {
+                            xx[mid + 1] = nums[i];
+                            break;
+                        }
+                        low = mid + 1;
+                    }
+
+                }
+
+            }
+        }
+        return idx + 1;
+    }
+
+
     public static void main(String[] args) {
+        int[] xx = {1, 3, 6, 7, 9, 4, 10, 5, 6};
 //        int[] xx = {3, 5, 6, 2, 5, 4, 19, 5, 6, 7, 12};
-        int[] xx = {3, 2, 1};
+//        int[] xx = {3, 2, 1};
         Solution s = new Solution();
-        System.out.println(s.lengthOfLIS(xx));
+        System.out.println(s.lengthOfLIS2(xx));
     }
 }
