@@ -39,7 +39,7 @@ public class LRUPageFrame {
      * 获取缓存中对象
      *
      * @param pageNum
-     * @return
+     * @returnReference
      */
     public void access(int pageNum) {
         if (capacity == 1) {
