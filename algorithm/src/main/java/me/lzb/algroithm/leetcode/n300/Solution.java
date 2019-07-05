@@ -38,7 +38,7 @@ class Solution {
             if (nums.length - j < r) {
                 break;
             }
-            if (nums[j] > minStart) {
+            if (nums[j] >= minStart) {
                 continue;
             } else {
                 minStart = nums[j];
