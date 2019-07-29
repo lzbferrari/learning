@@ -1,3 +1,43 @@
+HELP.md
+
+# Build output directies
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+target/*
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out
+test-output
+.idea_modules/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
+
+
+
 # OS generated files
 .DS_Store
 Thumbs.db
@@ -24,15 +64,9 @@ hs_err_pid*
 .gradle
 .m2
 
-# Build output directies
-build/
-target/
-target/*
 
 ### Eclipse project file ###
 .metadata
-.classpath
-.project
 .settings/
 bin/
 tmp/
@@ -44,16 +78,6 @@ tmp/
 .launch
 .cproject
 
-
-# IntelliJ project files
-*.iml
-*.iws
-*.ipr
-.idea
-out
-test-output
-.idea_modules/
-
 # JIRA plugin
 atlassian-ide-plugin.xml
 
@@ -63,4 +87,3 @@ atlassian-ide-plugin.xml
 *_IS_UNDEFINED
 logs
 *.log
-

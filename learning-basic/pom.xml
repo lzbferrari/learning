@@ -7,7 +7,7 @@
     <parent>
         <artifactId>learning</artifactId>
         <groupId>me.lzb</groupId>
-        <version>1.0</version>
+        <version>0.0.1-SNAPSHOT</version>
         <!--<relativePath>../pom.xml</relativePath>-->
     </parent>
 
@@ -18,7 +18,7 @@
         <dependency>
             <groupId>me.lzb</groupId>
             <artifactId>common</artifactId>
-            <version>1.0</version>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>
