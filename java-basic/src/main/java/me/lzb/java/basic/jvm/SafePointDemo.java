@@ -41,8 +41,7 @@ public class SafePointDemo {
         t1.start();
         t2.start();
 
-        char i = (char)System.in.read();
-        c = i;
+        c = (char)System.in.read();
         System.out.println(c);
     }
 
