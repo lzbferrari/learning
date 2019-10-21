@@ -6,6 +6,14 @@ import java.util.List;
 import java.util.Queue;
 
 /**
+ * 二叉树：每个结点最多有两个子树的树结构
+ * 高度：下往上数，从该节点到叶子节点的最长简单路径边的条数
+ * 深度：上到下数，从根节点到该节点的最长简单路径边的条数
+ *
+ * 满二叉树：每一个层的结点数都达到最大值
+ * 完全二叉树：若设二叉树的深度为h，除第 h 层外，其它各层 (1～h-1) 的结点数都达到最大个数，第 h 层所有的结点都连续集中在最左边
+ *
+ *
  * @author LZB
  */
 public class BinarySearchTree<T extends Comparable<T>> {
