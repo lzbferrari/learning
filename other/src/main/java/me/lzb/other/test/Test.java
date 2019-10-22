@@ -10,19 +10,15 @@ import java.util.Optional;
 public class Test {
 
     public static void main(String[] args) {
-//        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6);
-//        Optional<Integer> count = list.stream().reduce((a, b) -> (a + b));
-//        Integer count2 = list.stream().reduce(2, (a, b) -> (a * b));
-//        System.out.println(count.get());
 
-        int a = 1;
-        boolean b = ++a == 1;
-        System.out.println(b);
 
-        int c = 1;
-        boolean d = c++ == 1;
-        System.out.println(d);
+
+
+
     }
+
+
+
 
 
 }
