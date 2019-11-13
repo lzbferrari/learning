@@ -165,13 +165,6 @@ public class HelixMatrix {
             return;
         }
 
-        int j = partition(a, lo, hi);
-        sort(a, j + 1, hi);
-        sort(a, lo, j - 1);
-    }
-
-    private static int partition(int[] a, int lo, int hi) {
-
         int i = lo;
         int j = hi;
         //切分元素就选数组头部的元素
@@ -197,6 +190,7 @@ public class HelixMatrix {
         }
 
         a[i] = v;
-        return i;
+        sort(a, j + 1, hi);
+        sort(a, lo, j - 1);
     }
 }
