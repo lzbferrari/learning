@@ -25,10 +25,10 @@ import java.util.List;
 public class ClassFileloaderTest {
 
 
-    static String path1 = EmployeeV1.class.getResource("/").getPath();
-    static String path2 = "C:\\temp";
+    private static String path1 = EmployeeV1.class.getResource("/").getPath();
+    private static String path2 = "C:\\temp";
 
-    static String className = "me.lzb.jvm.EmployeeV1";
+    private static String className = "me.lzb.jvm.EmployeeV1";
 
     private static final String FULL_QUALIFIED_CLASS_NAME = "me/lzb/jvm/EmployeeV1";
 
@@ -47,8 +47,8 @@ public class ClassFileloaderTest {
 
         String s = EmployeeV1.class.getResource("/").getPath();
         String s2 = EmployeeV1.class.getResource("").getPath();
-//        System.out.println(s);
-//        System.out.println(s2);
+        System.out.println(s);
+        System.out.println(s2);
 
     }
 

@@ -29,12 +29,12 @@ public class TopkQuicksort {
         }
     }
 
-    private static int partition(long[] a, int lo, int hi) {
+    private static int partition(long[] a, int i, int j) {
 
-        int i = lo;
-        int j = hi;
+//        int i = lo;
+//        int j = hi;
         //切分元素就选数组头部的元素
-        long v = a[lo];
+        long v = a[i];
 
         while (i != j) {
             //先从右边找一个放到左边

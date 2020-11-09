@@ -1,5 +1,7 @@
 package me.lzb.algroithm.dynamic;
 
+import java.util.HashMap;
+
 /**
  * 最长公共子序
  * Created by lzb on 19/2/20
@@ -78,10 +80,20 @@ public class LongestCommonSubsequence {
         return String.valueOf(tmp);
     }
 
+//    public static void main(String[] args) {
+//        String a = "cfabd";
+//        String b = "caabc";
+//        System.out.println(common(a, b));
+//    }
+
     public static void main(String[] args) {
-        String a = "cfabd";
-        String b = "caabc";
-        System.out.println(common(a, b));
+        String a = "qq";
+        String b = "qq";
+        StringBuilder sb = new StringBuilder();
+        sb.append("qq");
+        System.out.println(a == b);
+        System.out.println(a == sb.toString());
+        new HashMap<>(1);
     }
 
 }

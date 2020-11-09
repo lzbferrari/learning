@@ -3,6 +3,10 @@ package me.lzb.basic.download;
 import me.lzb.basic.download.api.Connection;
 
 import java.io.RandomAccessFile;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.CyclicBarrier;
 
 /**
@@ -37,7 +41,6 @@ public class DownloadThread extends Thread {
             file.close();
             conn.close();
             barrier.await();
-
         } catch (Exception e) {
 
         }

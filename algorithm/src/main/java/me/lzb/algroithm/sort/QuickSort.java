@@ -60,7 +60,6 @@ public class QuickSort {
         //对当前partition右边的数字排序
         sort(array, l + 1, right);
 
-
     }
 
     public static void main(String[] args) {
