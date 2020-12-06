@@ -1,4 +1,4 @@
-package me.lzb.algroithm.leetcode.n42;
+package me.lzb.algroithm.leetcode;
 
 /**
  * 给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。
@@ -14,7 +14,7 @@ package me.lzb.algroithm.leetcode.n42;
  *
  * @author LZB
  */
-class Solution {
+class Solution42 {
 
     /**
      * 分治

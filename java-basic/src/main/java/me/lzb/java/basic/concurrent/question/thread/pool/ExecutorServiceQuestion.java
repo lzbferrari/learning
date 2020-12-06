@@ -16,7 +16,6 @@ public class ExecutorServiceQuestion {
         ExecutorService executorService = Executors.newFixedThreadPool(2);
 
         executorService = Executors.newScheduledThreadPool(2);
-
         // executorService 不再被引用，它会被 GC -> finalize() -> shutdown()
         ExecutorService executorService2 = Executors.newSingleThreadExecutor();
     }

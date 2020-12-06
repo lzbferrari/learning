@@ -1,6 +1,10 @@
-package me.lzb.algroithm.leetcode.n474;
+package me.lzb.algroithm.leetcode;
 
 import org.junit.Test;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * 给你一个二进制字符串数组 strs 和两个整数 m 和 n 。
@@ -35,7 +39,7 @@ import org.junit.Test;
  * 链接：https://leetcode-cn.com/problems/ones-and-zeroes
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class Solution {
+public class Solution474 {
 
 
     public int findMaxForm(String[] strs, int m, int n) {
@@ -103,7 +107,7 @@ public class Solution {
 
         }
 
-
+        Arrays.sort(new int[10]);
         return tmp[strs.length][m][n];
     }
 
@@ -118,14 +122,14 @@ public class Solution {
                 t[1] = t[1] + 1;
             }
         }
+        Set<String> hashSet = new HashSet<>();
         return t;
     }
 
     @Test
     public void test() {
-        String[] strs = {"10", "0001", "111001", "1", "0"};
-        int a = findMaxForm3(strs, 5, 3);
-        System.out.println(a);
+        int a = -1;
+        System.out.println(a +"");
     }
 
 }

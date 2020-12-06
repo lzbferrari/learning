@@ -1,4 +1,4 @@
-package me.lzb.algroithm.leetcode.n1025;
+package me.lzb.algroithm.leetcode;
 
 import org.junit.Test;
 
@@ -35,7 +35,7 @@ import org.junit.Test;
  * 链接：https://leetcode-cn.com/problems/divisor-game
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class Solution {
+public class Solution1025 {
 
     public static boolean divisorGame(int N) {
         //数学归纳法归纳出来的规律，偶数先手赢，奇数先手输

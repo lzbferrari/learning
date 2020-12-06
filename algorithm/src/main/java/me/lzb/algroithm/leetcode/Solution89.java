@@ -1,4 +1,4 @@
-package me.lzb.algroithm.leetcode.n89;
+package me.lzb.algroithm.leetcode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +35,7 @@ import java.util.List;
  *
  * @author LZB
  */
-class Solution {
+class Solution89 {
     /**
      * 动态规划
      * n位就是n-1位的结果的前面加一位0，和加一位1

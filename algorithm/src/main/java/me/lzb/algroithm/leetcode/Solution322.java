@@ -1,4 +1,4 @@
-package me.lzb.algroithm.leetcode.n322;
+package me.lzb.algroithm.leetcode;
 
 
 /**
@@ -18,7 +18,7 @@ package me.lzb.algroithm.leetcode.n322;
  * <p>
  * Created by lzb on 19/2/23
  */
-class Solution {
+class Solution322 {
 
 
     /**

@@ -1,4 +1,4 @@
-package me.lzb.algroithm.leetcode.n53;
+package me.lzb.algroithm.leetcode;
 
 /**
  * 给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
@@ -14,7 +14,7 @@ package me.lzb.algroithm.leetcode.n53;
  * <p>
  * Created by lzb on 19/1/23
  */
-class Solution {
+class Solution53 {
 
     public static int maxSubArray(int[] nums) {
         int sum = nums[0];

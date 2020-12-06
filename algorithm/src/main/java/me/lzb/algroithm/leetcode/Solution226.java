@@ -1,4 +1,4 @@
-package me.lzb.algroithm.leetcode.n226;
+package me.lzb.algroithm.leetcode;
 
 
 /**
@@ -6,7 +6,7 @@ package me.lzb.algroithm.leetcode.n226;
  *
  * @author LZB
  */
-class Solution {
+class Solution226 {
     /**
      * 从上到下，递归替换左和右子节点
      *
@@ -37,4 +37,16 @@ class Solution {
     }
 
 
+    /**
+     * @author LZB
+     */
+    static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+        }
+    }
 }

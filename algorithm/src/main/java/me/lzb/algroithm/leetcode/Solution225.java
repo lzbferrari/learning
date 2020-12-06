@@ -1,4 +1,4 @@
-package me.lzb.algroithm.leetcode.n225;
+package me.lzb.algroithm.leetcode;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -18,14 +18,14 @@ import java.util.Queue;
  *
  * @author LZB
  */
-class MyStack {
+class Solution225 {
     private Queue<Integer> queue1;
     private Queue<Integer> queue2;
     private boolean isOne;
 
 
     /** Initialize your data structure here. */
-    public MyStack() {
+    public Solution225() {
         queue1 = new LinkedList();
         queue2 = new LinkedList();
         isOne = true;

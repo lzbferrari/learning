@@ -1,4 +1,4 @@
-package me.lzb.algroithm.leetcode.n922;
+package me.lzb.algroithm.leetcode;
 
 import java.util.Arrays;
 
@@ -20,7 +20,7 @@ import java.util.Arrays;
  * <p>
  * Created by lzb on 19/4/30
  */
-class Solution {
+class Solution922 {
 
 
     public int[] sortArrayByParityII(int[] A) {
@@ -93,7 +93,7 @@ class Solution {
 
     public static void main(String[] args) {
         int[] a = {4, 2, 5, 7};
-        Solution s = new Solution();
+        Solution922 s = new Solution922();
         System.out.println(Arrays.toString(s.sortArrayByParityII(a)));
 
     }

@@ -1,4 +1,4 @@
-package me.lzb.algroithm.leetcode.n56;
+package me.lzb.algroithm.leetcode;
 
 import java.util.Arrays;
 
@@ -18,7 +18,7 @@ import java.util.Arrays;
  * <p>
  * Created by LZB on 19/4/30
  */
-class Solution {
+class Solution56 {
 
     public int[][] merge(int[][] intervals) {
         if (intervals == null) {
@@ -106,7 +106,7 @@ class Solution {
     public static void main(String[] args) {
         int[][] a = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
 
-        Solution s = new Solution();
+        Solution56 s = new Solution56();
         System.out.println(Arrays.deepToString(s.merge(a)));
 
     }

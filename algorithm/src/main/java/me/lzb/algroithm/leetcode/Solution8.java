@@ -1,4 +1,4 @@
-package me.lzb.algroithm.leetcode.n8;
+package me.lzb.algroithm.leetcode;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 /**
  * Created by egan on 19/10/11
  */
-class Solution {
+class Solution8 {
     /**
      * 正则操作
      * @param str

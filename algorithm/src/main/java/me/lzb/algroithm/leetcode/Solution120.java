@@ -1,4 +1,4 @@
-package me.lzb.algroithm.leetcode.n120;
+package me.lzb.algroithm.leetcode;
 
 import java.util.List;
 
@@ -25,7 +25,7 @@ import java.util.List;
  *
  * Created by lzb on 19/10/22
  */
- class Solution {
+ class Solution120 {
     /**
      * 自底向上，动态规划
      *

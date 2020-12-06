@@ -1,4 +1,4 @@
-package me.lzb.algroithm.leetcode.n300;
+package me.lzb.algroithm.leetcode;
 
 /**
  * 给定一个无序的整数数组，找到其中最长上升子序列的长度。
@@ -19,7 +19,7 @@ package me.lzb.algroithm.leetcode.n300;
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  * Created by egan on 19/7/4
  */
-class Solution {
+class Solution300 {
 
     /**
      * 动态规划
@@ -151,7 +151,7 @@ class Solution {
         int[] xx = {1, 3, 6, 7, 9, 4, 10, 5, 6};
 //        int[] xx = {3, 5, 6, 2, 5, 4, 19, 5, 6, 7, 12};
 //        int[] xx = {3, 2, 1};
-        Solution s = new Solution();
+        Solution300 s = new Solution300();
         System.out.println(s.lengthOfLIS2(xx));
     }
 }
